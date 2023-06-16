@@ -22,7 +22,7 @@
                             href=""><span><i class="fa-solid fa-eye text-blue-600 hover:text-2xl"></i></span></a><a
                             href=""><span><i
                                     class="fa-solid fa-box-archive px-2 text-green-500 hover:text-2xl"></i></span></a><span><a
-                                href=""><i class="fa-solid fa-pen-to-square text-orange-500 hover:text-2xl"></i></a></span></td>
+                                href=""><i class="fa-solid fa-pen-to-square text-orange-500 hover:text-2xl"></i></a></span></td>t
                 </tr>
             </table>
         </section>
