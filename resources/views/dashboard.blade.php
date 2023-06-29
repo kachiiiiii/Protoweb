@@ -1,8 +1,8 @@
 <x-app-layout>
     <x-slot name="mainContent">
         <section class="w-4/6 mx-auto">
-            <div class="grid grid-cols-3 gap-7 container p-32 shadow-2xl shadow-yellow-500">
-                <div class="px-8 py-10 bg-violet-900 rounded-md font-semibold text">
+            <div class="grid gap-4  md:grid-cols-1 lg:grid-cols-3 p-32 shadow-2xl shadow-yellow-500 place-content-center">
+                <div class="px-8 py-10 bg-violet-900 rounded-md font-semibold text w-auto">
                     <a href="">
                         <div>
                             <div class="text-yellow-100 text-center text-xl hover:text-3xl"><i
@@ -15,6 +15,7 @@
                         </div>
                     </a>
                 </div>
+               
                 <div class="px-8 py-10 bg-violet-900 rounded-md font-semibold text">
                     <a href="">
                         <div>
@@ -41,6 +42,7 @@
                         </div>
                     </a>
                 </div>
+                 
                 <div class="px-8 py-10 bg-violet-900 rounded-md">
                     <a href="">
                         <div>
@@ -68,7 +70,7 @@
                     </a>
                 </div>
 
-            </div>
+            </div> 
         </section>
     </x-slot>
 </x-app-layout>

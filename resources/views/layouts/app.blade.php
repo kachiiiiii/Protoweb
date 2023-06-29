@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -54,9 +58,9 @@
                 <div class="flex">
                     <div class="bg-violet-900 h-screen w-56">
                         <div class="p-4">
-                            <i class="fa-regular fa-envelope fa-xl text-yellow-100"></i>&nbsp;<a
-                                href="{{ route('compose.create') }}"
-                                class="text-xl bg-slate-200 rounded p-2 px-5 font-serif hover:text-green-500">New
+                         
+                            <a href="{{ route('compose.create') }}"
+                                class="text-sm bg-slate-200 rounded p-2 px-5 font-serif hover:text-green-500 block"> <i class="fa-regular fa-envelope"></i>&nbsp;New
                                 Message</a>
                         </div>
                         <div class="p-5 m-3">

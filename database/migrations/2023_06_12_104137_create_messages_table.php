@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
+            $table->string('sender_name');
+            $table->string('sender_email');
+            $table->string('receiver');
+            $table->string('subject');
+            $table->text('message');
+            $table->string('sent')->default(1);
+            $table->string('folder')->nullable();
             $table->timestamps();
         });
     }

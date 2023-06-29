@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MsgController;
 use App\Http\Controllers\ComposeController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\MessagesController;
+//use App\Http\Controllers\MessagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,12 +30,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/compose', [ComposeController::class, 'index'])->name('compose.create');
-    Route::get('/inbox', [MessagesController::class, 'inbox'])->name('inbox');
-    Route::get('/draft', [MessagesController::class, 'draft'])->name('draft');
-    Route::get('/sent', [MessagesController::class, 'sent'])->name('sent');
-    Route::get('/archive', [MessagesController::class, 'archive'])->name('archive');
-    Route::get('/trash', [MessagesController::class, 'trash'])->name('trash');
-   
+    Route::post('/compose', [MsgController::class, 'store'])->name('compose.store');
+    Route::get('/inbox', [MsgController::class, 'inbox'])->name('inbox');
+    Route::get('/draft', [MsgController::class, 'draft'])->name('draft');
+    Route::get('/sent', [MsgController::class, 'sent'])->name('sent');
+    Route::get('/archive', [MsgController::class, 'archive'])->name('archive');
+    Route::get('/trash', [MsgController::class, 'trash'])->name('trash');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
