@@ -95,7 +95,7 @@ class MsgController extends Controller
      */
     public function update(Request $request, Msg $msg)
     {
-        //
+        
     }
 
     /**
