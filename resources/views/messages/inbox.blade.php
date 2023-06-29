@@ -23,6 +23,29 @@
                     </script>
                 </div>
             @endif
+
+                    @if (session('error'))
+                <div>
+                    <script>
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: 'top-end',
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                                toast.addEventListener('mouseenter', Swal.stopTimer)
+                                toast.addEventListener('mouseleave', Swal.resumeTimer)
+                            }
+                        })
+
+                        Toast.fire({
+                            icon: 'error',
+                            title: '{{ session('error') }}'
+                        })
+                    </script>
+                </div>
+            @endif
             <div>
                 <h3 class="p-2 font-extrabold text-stone-600 text-2xl">Inbox</h3>
             </div>
