@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Msg;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -64,8 +65,13 @@ class MsgController extends Controller
             $msg->subject = $request->subject;
             $msg->receiver = $request->receiver;
             $msg->message = $request->message;
+          if (User::where('email', $msg->receiver)->exists()) {
             $msg->save();
-        return redirect()->route('inbox')->with('message' ,'your message sent sucessfully');
+            return redirect()->route('inbox')->with('message', 'your message sent sucessfully');
+          } else {
+            return redirect()->route('inbox')->with('error', 'email does not exist');
+          }
+          
     }
 
     /**
